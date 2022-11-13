@@ -1,0 +1,148 @@
+.head {
+    width : 80%;
+    margin : auto;
+    border : 1px solid black;
+}
+
+#title {
+    padding-left : 20px;
+    font-size : 50px;
+    display : inline-block;
+}
+
+#Magnifying_Glass {
+    width : 70px;
+    height : 70px;
+    display : flex;
+    float : right;
+    margin : 5px 5px 5px 5px;
+}
+
+#searchbtn {
+    font-size : 20px;
+}
+
+#search {
+    padding : 10px;
+    width : 80%;
+    margin : auto;
+}
+
+#areacheck, #search>.row{
+    margin : auto;
+}
+
+#localsearch {
+    font-size : 20px;
+}
+
+.checktable{
+    border : 1px solid black;
+}
+
+.maintable {
+    width : 100%;
+}
+.checktable>td {
+    padding : 10px;
+}
+
+.datetable {
+    text-align : center;
+    border : 1px solid black;
+}
+
+.checkb {
+    zoom : 1.5;
+}
+
+#checkdiv {
+    margin-bottom : 10px;
+}
+
+#datediv {
+    margin-top : 10px;
+    border : 1px solid black;
+    width : 100%;
+    text-align : center;
+}
+
+#sortdiv {
+    margin-top : 10px;
+    border : 1px solid black;
+    float : right;
+    padding-top : 15px;
+}
+
+#resulttable {
+    width: 80%;
+    border : 1px solid black;
+    border-collapse:collapse;
+    font-size : 10pt;
+    margin : auto;
+}
+
+#resulttable>tr>th, #resulttable>tr>td {
+    padding : 7px;
+    border : 1px solid black;
+    border-collapse:collapse;
+    text-align : center;
+}
+
+#resulttable>tr>th {
+    background-color : skyblue;
+    font-size : 13pt;
+    padding : 7px;
+}
+
+#partial {
+    float : right;
+}
+
+aside {
+    float: right;
+    border: 1px solid black;
+    width : 33%;
+}
+
+#center>table {
+    float: left;
+    text-align : center;
+    border : 1px solid black;
+    width : 65%;
+}
+
+#register_festival_head {
+    margin : 10px 30px 10px 30px;
+    font-size : 60px;
+    letter-spacing : 5px;
+    text-shadow : 3px 3px #ffc6e1;
+}
+
+#register_info, #register_cancel {
+    font-size : 15px;
+    padding : 5px 5px;
+}
+
+legend, .register_content {
+    color : rgb(0, 78, 131)
+}
+
+fieldset {
+    width : 60%;
+}
+
+.necessary {    /* https://limqoh.tistory.com/entry/web05 137-138*/
+    border : 2px solid;
+    border-image: linear-gradient(to right, red, yellow, blue);
+    border-image-slice: 1;
+}
+
+#rg_festival_name {
+    width : 60%;
+    padding : 10px 10px 10px 10px;
+}
+
+#filter_div {
+    border : 1px dotted gray;
+}

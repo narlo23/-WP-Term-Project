@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="termproject.css" rel="stylesheet">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>축제 등록하기</title>
+</head>
+<body>
+    <h2 id="register_festival_head">축제 등록하기</h2>
+    <hr>
+    <div class="necessary" id="rg_festival_name">
+        <label for="festivalname" class="register_label"><b>축제명 : </b></label><input type="text" id="festivalname">
+    </div>
+    <br>
+    <fieldset class="necessary">
+        <legend><b>개최 지역</b></legend>
+        <table class="checktable">
+            <tr>
+                <td>
+                    <input type="checkbox" value="서울" class="checkb" id="rg_check1">서울
+                </td>
+                <td>
+                    <input type="checkbox" value="경기" class="checkb" id="rg_check2">경기
+                </td>
+                <td>
+                    <input type="checkbox" value="인천" class="checkb" id="rg_check3">인천
+                </td>
+                <td>
+                    <input type="checkbox" value="부산" class="checkb" id="rg_check4">부산
+                </td>
+                <td>
+                    <input type="checkbox" value="대구" class="checkb" id="rg_check5">대구
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="대전" class="checkb" id="rg_check6">대전
+                </td>
+                <td>
+                    <input type="checkbox" value="광주" class="checkb" id="rg_check7">광주
+                </td>
+                <td>
+                    <input type="checkbox" value="울산" class="checkb" id="rg_check8">울산
+                </td>
+                <td>
+                    <input type="checkbox" value="세종" class="checkb" id="rg_check9">세종
+                </td>
+                <td>
+                    <input type="checkbox" value="경상북도" class="checkb" id="rg_check10">경상북도
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="경상남도" class="checkb" id="rg_check11">경상남도
+                </td>
+                <td>
+                    <input type="checkbox" value="충청북도" class="checkb" id="rg_check12">충청북도
+                </td>
+                <td>
+                    <input type="checkbox" value="충청남도" class="checkb" id="rg_check13">충청남도
+                </td>
+                <td>
+                    <input type="checkbox" value="전라북도" class="checkb" id="rg_check14">전라북도
+                </td>
+                <td>
+                    <input type="checkbox" value="전라남도" class="checkb" id="rg_check15">전라남도
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="강원도" class="checkb" id="rg_check16">강원도
+                </td>
+                <td>
+                    <input type="checkbox" value="제주도" class="checkb" id="rg_check17">제주도
+                </td>
+                <td>
+                    <input type="checkbox" value="온라인" class="checkb" id="rg_check18">온라인
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <br>
+    <fieldset class="necessary">
+        <legend><b>개최 기간</b></legend>
+        <table class="datetable">
+            <tr>
+                <td>
+                    <input type="date" id="rg_startdate">   <!--시작일-->
+                </td>
+                <td>
+                    <p style="font-size : 20px">~</p>
+                </td>
+                <td>
+                    <input type="date" id="rg_enddate">     <!--종료일-->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="startdate">시작일</label>
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    <label for="enddate">종료일</label>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend><b>축제 정보</b></legend>
+        <p class="register_content"><b>축제 소재 : </b></p>
+        <!--placeholder를 이용하여 입력 값이 무엇인지 추측할 수 있도록-->
+        <textarea id="rg_subject" rows="5" cols="30" placeholder="축제 소재를 입력해주세요."></textarea>
+        <div>
+            <br>
+            <fieldset>
+                <legend><b>축제 이미지</b></legend>
+                <input type="file" id="festivalimg">
+            </fieldset>
+            
+            <p class="register_content"><b>축제 내용</b></p>
+            <textarea id = "rg_content" rows="7" cols="30" placeholder="축제 내용을 입력해주세요."></textarea>
+        </div>
+    </fieldset>
+    
+    <br><br>
+    <div class="register_btn_class">
+        <button type="button" id="register_info">등록하기</button>
+        <button type="button" id="register_cancel">취소하기</button>
+    </div>
+    <script src="./register.js"></script>
+</body>
+</html>

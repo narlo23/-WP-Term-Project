@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축제 모음 사이트</title>
+    <link href="termproject.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <!-- 타이틀-->
+        <div class="head">
+            <h1 id="title"><b>축제 모음 사이트</b></h1>
+            <img src="./images/free-icon-magnifying-glass-324756.png" id="Magnifying_Glass">
+        </div>
+    </header>
+    <br><hr style="border:1px solid black; width:80%;"><br>
+ 
+    <button type="button" id="register" style="float:right; margin-right:10%;">축제 등록하기</button>
+    
+    <br><hr style="border:1px solid black; width:80%;"><br>
+    <!-- 검색 조건 지정-->
+    <div id="search">
+        <div class="row">
+            <!-- 키워드 검색-->
+            <input type="text" id="localsearch" size=50 placeholder="검색할 키워드를 입력하세요.">
+            <button type="button" id="searchbtn">검색</button>
+        </div>
+        <br>
+        <div id="filter_div">
+            <div class="row" id="areacheck">
+                <div class="col-sm-12 col-md-6 col-lg-6" id="checkdiv">
+                    <!-- checkbox를 이용하여 지역 선택-->
+                    <table class="checktable maintable" id="checktb">
+                        <tr>
+                            <td>
+                                <input type="checkbox" value="서울" class="checkb" id="check1">서울
+                            </td>
+                            <td>
+                                <input type="checkbox" value="경기" class="checkb" id="check2">경기
+                            </td>
+                            <td>
+                                <input type="checkbox" value="인천" class="checkb" id="check3">인천
+                            </td>
+                            <td>
+                                <input type="checkbox" value="부산" class="checkb" id="check4">부산
+                            </td>
+                            <td>
+                                <input type="checkbox" value="대구" class="checkb" id="check5">대구
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" value="대전" class="checkb" id="check6">대전
+                            </td>
+                            <td>
+                                <input type="checkbox" value="광주" class="checkb" id="check7">광주
+                            </td>
+                            <td>
+                                <input type="checkbox" value="울산" class="checkb" id="check8">울산
+                            </td>
+                            <td>
+                                <input type="checkbox" value="세종" class="checkb" id="check9">세종
+                            </td>
+                            <td>
+                                <input type="checkbox" value="경상북도" class="checkb" id="check10">경상북도
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" value="경상남도" class="checkb" id="check11">경상남도
+                            </td>
+                            <td>
+                                <input type="checkbox" value="충청북도" class="checkb" id="check12">충청북도
+                            </td>
+                            <td>
+                                <input type="checkbox" value="충청남도" class="checkb" id="check13">충청남도
+                            </td>
+                            <td>
+                                <input type="checkbox" value="전라북도" class="checkb" id="check14">전라북도
+                            </td>
+                            <td>
+                                <input type="checkbox" value="전라남도" class="checkb" id="check15">전라남도
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" value="강원도" class="checkb" id="check16">강원도
+                            </td>
+                            <td>
+                                <input type="checkbox" value="제주도" class="checkb" id="check17">제주도
+                            </td>
+                            <td>
+                                <input type="checkbox" value="온라인" class="checkb" id="check18">온라인
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6" class="datediv">
+                    <div>
+                        <!-- 날짜 기준으로 검색-->
+                        <table class="datetable maintable">
+                            <tr>
+                                <td>
+                                    <input type="date" id="startdate">
+                                </td>
+                                <td>
+                                    <p style="font-size : 20px">~</p>
+                                </td>
+                                <td>
+                                    <input type="date" id="enddate">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="startdate">시작일</label>
+                                </td>
+                                <td>
+        
+                                </td>
+                                <td>
+                                    <label for="enddate">종료일</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="sortdiv">
+                        <!-- 정렬 기준-->
+                        <select id="sort">
+                            <option value="date">날짜순</option>
+                            <option value="dictionary">가나다순</option>
+                        </select>
+                        <!-- 오름차순/내림차순-->
+                        <input type="radio" name="sortradio" value="오름차순" checked>오름차순
+                        <input type="radio" name="sortradio" value="내림차순">내림차순
+                    </div>
+                </div>
+            </div>
+            <button type="button" value="필터" id="filter">필터</button>
+        </div>
+        <div id="partial">
+            <!-- 진행중/진행전/지난 축제 구분을 위한 checkbox-->
+            <b>진행중/진행전/지난 축제 구분</b>
+            <table>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="festival_state" value="진행중" id="in_progress" checked>진행중
+                    </td>
+                    <td>
+                        <input type="checkbox" name="festival_state" value="진행전" id="before_progress" checked>진행전
+                    </td>
+                    <td>
+                        <input type="checkbox" name="festival_state" value="지난 축제" id="past" checked>지난 축제
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br><hr style="border:1px solid black; width:80%;"><br>
+    <div id="result">
+        
+    </div>
+    <br><br>
+
+    <script src="./termproject.js"></script>
+</body>
+</html>
